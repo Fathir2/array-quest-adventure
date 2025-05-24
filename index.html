@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Adventure Quest - Enhanced</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Array Methods Adventure</h1>
+            <p>Kuasai JavaScript Array Methods melalui quest yang menantang!</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            <div class="progress-text" id="progress-text">0%</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="completed-quests">0</div>
+                <div>Quest Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-score">0</div>
+                <div>Total Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="current-level">Novice</div>
+                <div>Current Level</div>
+            </div>
+        </div>
+        
+        <div class="difficulty-filter">
+            <button class="filter-btn active" onclick="filterQuests('all')">All Quests</button>
+            <button class="filter-btn" onclick="filterQuests('Beginner')">Beginner</button>
+            <button class="filter-btn" onclick="filterQuests('Intermediate')">Intermediate</button>
+            <button class="filter-btn" onclick="filterQuests('Advanced')">Advanced</button>
+        </div>
+        
+        <div class="quest-container" id="quest-container">
+            <!-- Quest akan di-generate oleh JavaScript -->
+        </div>
+    </div>
+    
+    <div class="achievement" id="achievement">
+        🎉 Quest Completed! +50 XP
+    </div>
+
+</body>
+</html>
