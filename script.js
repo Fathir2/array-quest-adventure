@@ -161,7 +161,7 @@ const quests = [
     {name: 'Bow', category: 'weapon', value: 60, quantity: 3},
     {name: 'Helmet', category: 'armor', value: 40, quantity: 2}
 ];`,
-                expectedOutput: "weapon: 380, armor: 200, consumable: 50",
+                expectedOutput: "weapon: 380, armor: 160, consumable: 50",
                 hint: "Gunakan reduce untuk grouping dan Object.entries untuk sorting. Kalkulasi: value * quantity",
                 solution: `const grouped = inventory.reduce((acc, item) => {\n    const category = item.category;\n    const totalValue = item.value * item.quantity;\n    acc[category] = (acc[category] || 0) + totalValue;\n    return acc;\n}, {});\n\nconst result = Object.entries(grouped)\n    .sort(([,a], [,b]) => b - a)\n    .map(([cat, val]) => cat + ': ' + val)\n    .join(', ');\n\nconsole.log(result);`,
                 validator: (code, output) => {
